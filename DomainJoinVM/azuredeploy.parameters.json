@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "existingVNETName": {
+      "value": "myVNetName"
+    },
+    "existingSubnetName": {
+      "value": "mySubnetName"
+    },
+    "VNetResourceGroupName": {
+      "value": "myVNetResourceGroup"
+    },
+    "vmSize": {
+      "value": "Standard_DS1_v2"
+    },
+    "domainJoinUserName": {
+      "value": "domain\\username"
+    },
+    "domainJoinUserPassword": {
+      "value": "password"
+    },
+    "domainFQDN": {
+      "value": "domain.tld"
+    },
+    "domainJoinOptions": {
+      "value": 3
+    },
+    "vmAdminUsername": {
+      "value": "vmuser"
+    },
+    "vmAdminPassword": {
+      "value": "password"
+    },
+    "vmName": {
+      "value": "myVMName"
+    }
+  }
+}
