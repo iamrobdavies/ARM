@@ -78,7 +78,8 @@
     "nicName": "[concat(parameters('vmName'),'Nic')]",
     "publicIPName": "[concat(parameters('vmName'),'Pip')]",
     "subnetId": "[resourceId(parameters('VNetResourceGroupName'), 'Microsoft.Network/virtualNetworks/subnets', parameters('existingVNETName'), parameters('existingSubnetName'))]",
-    "domainJoinDSCUrl" : "https://github.com/iamrobdavies/ARM/raw/master/DomainJoinDSC/DomainJoin.zip"
+    "domainJoinDSCUrl" : "https://github.com/iamrobdavies/ARM/raw/master/DomainJoinDSC/DomainJoin.zip",
+    "installModulesUrl" : "https://raw.githubusercontent.com/iamrobdavies/ARM/master/DomainJoinDSC/Install-ComputerManagementDsc.ps1"
   },
   "resources": [
     {
@@ -214,7 +215,7 @@
         "autoUpgradeMinorVersion": true,
         "settings": {
             "fileUris": [
-                "https://raw.githubusercontent.com/iamrobdavies/ARM/master/DomainJoinDSC/Install-ComputerManagementDsc.ps1"
+                "[variables('installModulesUrl')]"
             ]
         },
         "protectedSettings": {
