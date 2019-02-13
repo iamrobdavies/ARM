@@ -1,0 +1,1 @@
+Install-Module -Name ComputerManagementDsc -Force -AllowClobber -Confirm:$False -SkipPublisherCheck
